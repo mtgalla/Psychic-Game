@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Psychic Game
+  </title>
+</head>
+
+<body>
+<h1>The Psychic Game</h1>
+ <p>Guess what letter I'm thinking of</p>
+ <p>Wins: <span id="winCount">0</span></p>
+ <p>Losses: <span id="lossCount">0</span></p>
+ <p>Guesses Left: <span id="guessCount">9</span></p>
+ <p>Your Guesses so far: <span id="userGuess"></span></p>
+
+  <script type="text/javascript">
+
+    // Creates an array that lists out all of the options (Rock, Paper, or Scissors).
+    var choices = "abcdefghijklmnopqrstuvwxyz";
+    var wins = 0;
+    var losses = 0;
+    var guesses = 9;
+
+    console.log(choices.length);
+
+    // This function is run whenever the user presses a key.
+    //var allChoices = [];
+
+    
+    document.onkeyup = function(event) {
+     
+      // Determines which key was pressed.
+      
+      var computerGuess = choices[Math.floor(Math.random() * choices.length)];
+      var firstGuess = event.key; 
+      var userGuess = event.key;
+      var divParent = document.getElementById("userGuess");
+      var newDiv = document.createElement("span");
+      
+      if(computerGuess===userGuess){
+        wins++;
+        guesses = 9;
+        divParent.textContent = ("");
+      }
+      
+      else {
+      if (guesses===1){
+        losses++;
+        guesses=9;
+        divParent.textContent = ("");
+
+        //newDiv.textContent = (userGuess)
+        //divParent.appendChild(newDiv); 
+        
+      }
+      else{
+        losses++;
+        guesses--;
+        newDiv.textContent = (userGuess)
+        divParent.appendChild(newDiv); 
+      }
+      }
+
+    /*  var divParent = document.getElementById("userGuess");
+      var newDiv = document.createElement("span");
+      newDiv.textContent = (userGuess);
+      divParent.appendChild(newDiv);
+      */
+      var winParent = document.getElementById("winCount");
+      winParent.textContent = (wins);
+      
+      var lossParent = document.getElementById("lossCount");
+      lossParent.textContent = (losses);
+
+      var guessParent = document.getElementById("guessCount");
+      guessParent.textContent = (guesses);
+
+      // Randomly chooses a choice from the options array. This is the Computer's guess.
+      
+      
+      // Alerts the key the user pressed (userGuess).
+    
+      //allChoices.push(userGuess);
+
+      
+      console.log(computerGuess);
+      //console.log(allChoices);
+      console.log("losses=" + losses);
+      console.log(userGuess);
+      console.log(wins);
+      console.log(guesses);
+      console.log(newDiv);
+
+      function reset(){
+        //return allChoices=[];
+        guesses = 9;
+        divParent = document.getElementById("userGuess");
+        divParent.textContent = ("");
+      };
+     // }
+    };
+
+    
+
+
+    
+  </script>
+
+</body>
+
+</html>
