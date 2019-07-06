@@ -4,20 +4,26 @@
 <head>
   <meta charset="UTF-8">
   <!---<link rel="stylesheet" type="text/css" href="assets/css/reset.css">-->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous"> -->
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
   <script src="assets/javascript/game.js"></script>
   <title>Psychic Game</title>
 </head>
 
-<body class = "ml-3">
+<body>
   <!--Game: You get 9 tries to guess same letter as computer, if you guess the correct letter then you win, otherwise you lose.-->
-<h2>The Psychic Game</h2>
- <p>Guess what letter I'm thinking of</p>
- <p>Wins: <span id="winCount">0</span></p>
- <p>Losses: <span id="lossCount">0</span></p>
- <p>Guesses Left: <span id="guessCount">9</span></p>
- <p>Guesses so far: <span id="userGuess"></span></p>
+<div class="container">
+<h1>The Psychic Game</h1>
+<img class="item img" src="assets/images/crystalball.jpg">
 
+ <p class="item">Guess what letter I'm thinking of</p>
+ <p class="item">Wins: <span id="winCount">0</span></p>
+ <p class="item">Losses: <span id="lossCount">0</span></p>
+ <p class="item">Guesses Left: <span id="guessCount">9</span></p>
+ <p class="item">Guesses so far: <span id="userGuess"></span></p>
+
+</div>
 </body>
 
 </html>

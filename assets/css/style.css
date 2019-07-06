@@ -1,0 +1,49 @@
+html {
+  /* border-box box model allows us to add padding and border to our elements without increasing their size */
+  box-sizing: border-box;
+}
+
+body{
+  /* background-image: url("../images/crystalball2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; */
+  background-color: rgb(142, 241, 245);
+  background-image:linear-gradient(to right,rgb(95, 158, 160),rgb(142, 241, 245));
+  overflow-wrap: break-word;
+  font-size: larger;
+}
+
+span{
+  color:red;
+}
+
+.container{
+  display:grid;
+  margin-left:200px;
+  /* grid-template-columns: 200px 200px;
+  grid-template-rows: 200px; */
+  grid-gap: 0px;
+}
+
+.item {
+  /* We center the contents of these items. You can also do this with flexbox too! */
+  display: grid;
+  /* justify-content: center; */
+  align-items: center;
+  /* border: 5px solid rgba(0, 0, 0, 0.03); */
+  /* border-radius: 3px; */
+  font-size: 35px;
+  background-color: var(--yellow); /* best colour */
+}
+/* 
+.item p {
+  margin: 0 0 5px 0;
+} */
+
+.img {
+  /* grid-column: 1 / -1;
+  grid-row: 1 / -1; */
+  max-width: 100%;
+  height: auto;
+  /* object-fit: cover; */
+}
